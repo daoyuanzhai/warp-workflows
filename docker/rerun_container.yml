@@ -1,0 +1,16 @@
+---
+name: rerun a container
+command: "docker rm -f {{container_id}} && docker run -d --name {{container_id}} {{image_name}}"
+tags:
+  - docker
+description: remove a gunicorn container forcefully, and then rerun a new one
+arguments:
+  - name: container_id
+    description: ~
+    default_value: gunicorn
+  - name: image_name
+    description: ~
+    default_value: daoyuanhai/gunicorn:0.01
+author: daoyuanzhai
+author_url: "https://github.com/daoyuanzhai"
+shells: []
